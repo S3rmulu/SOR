@@ -1,0 +1,11 @@
+2 primeras lineas del archivo
+head -n 2 ejemplo.txt
+
+2 ultimas lineas del archivo
+tail -n 2 ejemplo.txt
+
+contar palabras del archivo
+wc -l ejemplo.txt
+
+Cambiar nombre archivos
+mv noseque.txt nosecuantos.txt

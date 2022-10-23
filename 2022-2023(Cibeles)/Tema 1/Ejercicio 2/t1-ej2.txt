@@ -1,0 +1,39 @@
+
+2. echo "Atletico Madrid, Madrid, Barça" >> ~/ejercicio0/deportes/futbol/primera/equipos.txt
+3. 	cd ~/ejercicio0/trabajo/escuela/informatica 
+	touch hardware.txt
+	touch software.txt
+4.cp ~/ejercicio0/deportes/futbol/primera/equipos.txt ~/ejercicio0/aficiones
+5.cp ~/ejercicio0/trabajo/escuela/informatica/* ~/ejercicio0/aficiones
+6.mkdir ~/ejercicio0/trabajo/profesional/ordenador
+7.	cp ~/ejercicio0/aficiones/hardware.txt ~/ejercicio0/trabajo/profesional/ordenador 
+	cp ~/ejercicio0/aficiones/software.txt ~/ejercicio0/trabajo/profesional/ordenador 
+8.echo -e "Placa base \nProcesador \nRAM \nDisco duro \nFuente alimentación \nCaja" >> ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt
+9.head -n3 ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt
+10. echo -e "Monitor \nTeclado \nRaton \nImpresora" >> ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt
+11. tail -n2 ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt
+12. wc -l < ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt
+13. wc -w -m < ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt
+14. echo -e "Windows, Linux" >> ~/ejercicio0/trabajo/profesional/ordenador/software.txt 
+15. cat -n ~/ejercicio0/trabajo/profesional/ordenador/hardware.txt ~/ejercicio0/trabajo/profesional/ordenador/software.txt
+16. mv ~/ejercicio0/deportes ~/ejercicio0/aficiones
+17. rm -Rf ~/ejercicio0/aficiones/deportes/futbol/
+18. date +'%d/%m/%Y' > ~/ejercicio0/trabajo/profesional/fecha.txt
+19. ln ~/ejercicio0/trabajo/profesional/fecha.txt ~/ejercicio0/fechacopia.txt
+20. ln -s ~/ejercicio0/trabajo/profesional/fecha.txt ~/ejercicio0/adfecha.txt
+21. mkdir ~/repaso1
+	echo -e "0201;Motosierra;120,55;1;120,55 \n0920;Cuchillo;20,00;3;60,00 \n0102;Guantes;12,50;2;25,00 \n0302;Bolsa de basura;1,00;15;15,00" >> ~/repaso1/productos.txt
+22. cut -d ';' -f2,5 ~/repaso1/productos.txt
+23. cut -d ';' -f2,5 ~/repaso1/productos.txt | tr -s ';' '-'
+24. cut -d ';' -f2,5 ~/repaso1/productos.txt | tr -s ';' '-' | sort -r > ~/repaso1/ordenados.txt
+25. grep Cuchillo < ~/repaso1/ordenados.txt
+26. grep ^M < ~/repaso1/ordenados.txt
+27. cut -d ';' -f2 ~/repaso1/productos.txt | grep a$
+28. find /home -type f -name "*.txt"
+29. find /home -type f -name "*s.txt"
+30. find ~/repaso1/ -type f -name "*.txt" -exec cat {} \;
+31. ln -s /home ~/repaso1/
+32. sudo cat /etc/passwd | tr -s ':' '_'
+33. cat /etc/passwd| cut -d ':' -f1,3 | tr -s ':' ' '| grep -w root
+34. ls -l ~/repaso1/ | tr -s ' ' ' ' | cut -d ' ' -f6,7,8,9
+35. ls -l ~/repaso1/ | tr -s " " " " | cut -d " " -f6,7,8,9 | tail -n 4

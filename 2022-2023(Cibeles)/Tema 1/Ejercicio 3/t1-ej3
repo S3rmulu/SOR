@@ -1,0 +1,30 @@
+1. mkdir ~/repaso2
+   echo "texto" > ~/repaso2/ejercicios.txt
+   echo "texto" > ~/repaso2/tema.txt
+2. sudo useradd alu1 
+   sudo useradd alu2
+   sudo useradd profe
+3. addgroup alumnos
+   sudo addgroup profes
+4. sudo usermod -a -G alumnos alu1
+   sudo usermod -a -G alumnos alu2
+   sudo usermod -a -G profes profe
+5. id profe
+6. sudo chfn -f "Pedro Alba" alu1
+7. id alu1
+8. chown ~/repaso2/tema.txt profe
+9. chmod 754 ~/repaso2/tema.txt
+10. sudo passwd alu1
+11. su alu1
+12. exit #No puedes modificarlo porque no alu1 solo tiene permiso de lectura
+13. chgrp ~/repaso2/ejercicios.txt alumnos
+14. chmod 774 ~/repaso2/ejercicios.txt
+15. sudo deluser alu2 alumnos
+16. su alu2 #No puedes modificarlo, alu2 solo tiene permisos de lectura
+17. chmod a-r
+18. chmod a=wr
+19. groupdel profes
+20. userdel alu1
+    userdel alu2
+    userdel profe
+21. groupdel alumnos
