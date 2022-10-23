@@ -1,0 +1,40 @@
+1  ls -a /
+2  ls -R -l /home
+3  echo $PATH ,variable de entorno donde se especifican las rutas en las cuales el intérprete de comandos debe buscar los programas a ejecutar.
+4  echo $HOME , $home muestra la carpeta del usuario actual y /home muestra el directorio que contiene las carpetas de los usuarios
+5  pwd
+6  ls -d l*
+7  mkdir sergio | export PATH="/home/sergio:$PATH"
+8  cat /etc/passwd, contiene informacion de los usuarios
+9  mkdir $HOME/D1/
+10 cp -r $HOME $HOME/D1/
+11 cat /etc/passwd | grep root
+12 sudo cat /etc/shadow
+13 cat /etc/passwd | tr -s ':''_'
+14 ls $HOME | wc -l
+15 find $HOME | wc -l
+16 ls -l /bin/ls /home /etc/group $HOME/Desktop  
+17 ls -l -s $HOME |ts -s ' ' ' ' | cut -d " " -f 4,6,10 | sort -t ' ' -k2 -n
+18 cd $HOME |ls -l > ls.txt 
+19 sudo cat /etc/shadow >>ls.txt 2>err.log 
+20 ls -r /etc | cut -d ":" -f 1,3 | grep root
+21 id root | cut -d " " -f 1,2
+22
+cd $HOME | ls -l>t1
+chmod u+w t1
+chmod o+x t1
+sudo chown root:root t1 
+sudo chmod a+w t1
+23
+cd $HOME | ls -l>t2
+chmod o+rwt t2 
+24 tail -n3 t1 > $HOME/ej8 
+25 find $HOME -name 't*' -exec touch{} +
+26 sudo chown root f1
+27 find $HOME -name 't*' -exec cat {} +
+28 find / -user guest -size +20b
+29 find / -user rot -size -1M > /root/ficheros_pequeños
+30 
+31 
+32 
+33 
