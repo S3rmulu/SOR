@@ -2,10 +2,10 @@
 
 while [ 1 -eq 1 ]
 do
- for p in `ps -ef | tr -s ' ' '|' | cut -d '|' -f2,9`
+ for p in `ps -ef | tr -s ' ' ' ' | cut -d ' ' -f2,9`
  do
- pid=`echo $p | cut -d '|' -f1`
- nom=`echo $p | cut -d '|' -f2`
+ pid=`echo $p | cut -d ' ' -f1`
+ nom=`echo $p | cut -d ' ' -f2`
  echo "$nom"
  echo "$pid"
 

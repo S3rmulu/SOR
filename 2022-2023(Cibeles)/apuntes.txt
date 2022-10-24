@@ -9,3 +9,6 @@ wc -l ejemplo.txt
 
 Cambiar nombre archivos
 mv noseque.txt nosecuantos.txt
+
+#Grep -v *
+Elimina las lineas que encuentra con el texto indicado
