@@ -1,11 +1,6 @@
 #!/bin/bash
 
-if [[  ]]; then
-    
-fi
-
 rm -r $HOME/Escritorio/*
-
 
 echo "#!/usr/bin/env xdg-open" >> $HOME/Escritorio/firefox.Desktop
 echo "[Desktop Entry]" >> $HOME/Escritorio/firefox.Desktop
