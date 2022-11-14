@@ -1,0 +1,5 @@
+a.
+cat /etc/passd |  
+
+b.
+cat /etc/d^.cfg 2>> error.txt

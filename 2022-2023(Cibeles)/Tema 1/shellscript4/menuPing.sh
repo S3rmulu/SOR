@@ -19,13 +19,13 @@ while [[ $out -eq 0 ]]; do
     else
         case $respuesta in
             
-        1) echo
+        1) sudo apt update
             ;;
 
-        2) echo
+        2) sudo apt upgrade
             ;;
         
-        3) echo
+        3) ip a
             ;;
 
         4) read -p "Introduce una ip: " ip

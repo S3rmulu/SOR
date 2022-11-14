@@ -1,0 +1,22 @@
+1.
+#Carpeta server
+sudo mkdir /smlshared
+sudo chown nobody:nogroup /smlshared
+sudo chmod -R 777 /smlshared
+sudo echo "/smlshared *(ro,no_subtree_check)" >> /etc/exports
+sudo systemctl restart nfs-kernel-server.service
+
+#Ip
+sudo cp /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.old
+sudo nano /etc/netplan/00-installer-config.yaml
+
+#Host
+sudo apt install nfs-common
+sudo mkdir -p /mnt/nfs/smlshared
+sudo chmod -R 777 /mnt/nfs
+sudo mount 192.168.^.^:/smlshared /mnt/nfs/smlshared
+
+#2.
+cp /etc/fstab /etc/fstab.old
+sudo echo "192.168.7.1:/smlshared  /mnt/nfs/    nfs4     defaults        0       0" >> /etc/fstab
+#EL ADAPTADOR ESTA EN PUENTE, CAMBIALO
