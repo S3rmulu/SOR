@@ -15,8 +15,9 @@ sudo apt install nfs-common
 sudo mkdir -p /mnt/nfs/smlshared
 sudo chmod -R 777 /mnt/nfs
 sudo mount 192.168.^.^:/smlshared /mnt/nfs/smlshared
+sudo echo "192.168.^.^:/var/compartido /mnt/nfs/var/compartido nfs 
+auto,noatime,nolock,bg,nfsvers=3,intr,tcp,actimeo=1800 0 0"
 
 #2.
 cp /etc/fstab /etc/fstab.old
 sudo echo "192.168.7.1:/smlshared  /mnt/nfs/    nfs4     defaults        0       0" >> /etc/fstab
-#EL ADAPTADOR ESTA EN PUENTE, CAMBIALO
